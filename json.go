@@ -6,30 +6,31 @@ import (
 	"log"
 )
 
+// you need to use capitalized field names for json.Marshall to work
 type Address struct {
-	street  string `json:"street"`
-	city    string `json:"city"`
-	country string `json:"country"`
+	Street  string `json:"street"`
+	City    string `json:"city"`
+	Country string `json:"country"`
 }
 
 type User struct {
-	username  string   `json:"username"`
-	height    int      `json:"height"`
-	address   Address  `json:"address"`
-	interests []string `json:"interests"`
+	Username  string   `json:"username"`
+	Height    int      `json:"height"`
+	Address   Address  `json:"address"`
+	Interests []string `json:"interests"`
 }
 
 func main() {
 	address := Address{
-		street:  "Main 1b/23",
-		city:    "Big",
-		country: "Important",
+		Street:  "Main 1b/23",
+		City:    "Big",
+		Country: "Important",
 	}
 	user := User{
-		username: "Martin",
-		height:   171,
-		address:  address,
-		interests: []string{
+		Username: "Martin",
+		Height:   171,
+		Address:  address,
+		Interests: []string{
 			"singin",
 			"dancing",
 		},
